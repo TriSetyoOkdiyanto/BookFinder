@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="UnusedAttribute">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="12dp"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light">
+
+        <EditText
+            android:id="@+id/search_keyword_edittext"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="true"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:inputType="text|textCapWords|textNoSuggestions"
+            android:textColor="@color/txt_black"
+            android:textColorHint="@color/txt_grey"
+            android:textCursorDrawable="@null">
+            <requestFocus />
+        </EditText>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/search_listing" />
+
+</LinearLayout>

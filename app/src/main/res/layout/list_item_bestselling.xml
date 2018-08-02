@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="128dp"
+    android:layout_height="wrap_content"
+    android:minHeight="184dp"
+    android:elevation="12dp"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/layout_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <com.example.etrnty.bookfinder.custom.CustomImageView
+            android:id="@+id/imageBook"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="image"
+            android:elevation="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/textJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/monserrat_r"
+            android:maxLines="1"
+            android:text="@string/judul"
+            android:textColor="@color/txt_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/author"
+            android:textColor="@color/txt_black"
+            android:textSize="14sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
